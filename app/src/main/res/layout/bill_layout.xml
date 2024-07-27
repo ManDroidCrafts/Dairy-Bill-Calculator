@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/serialNo"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="1. ">
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <LinearLayout
+        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shiftM"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="#fdf950"
+                android:text="MORNING"
+                android:textSize="20sp">
+            </androidx.appcompat.widget.AppCompatTextView>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/amountM"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="#D4890D"
+                android:inputType="numberDecimal">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/litresM"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="#D4890D"
+                android:inputType="numberDecimal">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shift"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="#fdf950"
+                android:text="EVENING"
+                android:textSize="20sp">
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/amount"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="#D4890D"
+                android:inputType="numberDecimal">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/litres"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="#D4890D"
+                android:inputType="numberDecimal">
+            </androidx.appcompat.widget.AppCompatEditText>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

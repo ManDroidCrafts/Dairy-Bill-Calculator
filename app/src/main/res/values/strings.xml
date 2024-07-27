@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My New App</string>
+
+    <string-array name="billingCycles">
+        <item>Select Bill Cycle</item>
+        <item>First Bill</item>
+        <item>Second Bill</item>
+    </string-array>
+
+</resources>
