@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +37,7 @@ public class CalculateBill extends AppCompatActivity {
         TextView amountTotal = findViewById(R.id.amountTotal);
         TextView litresTotal = findViewById(R.id.litresTotal);
         Button calculate = findViewById(R.id.calculate1);
+        TextView save = findViewById(R.id.save);
         ArrayList<BillData> list = new ArrayList<>();
 
         YearMonth yearMonth = YearMonth.of(AppVariables.selectedYear,AppVariables.selectedMonth+1);
@@ -59,5 +63,21 @@ public class CalculateBill extends AppCompatActivity {
                 //Toast.makeText(view.getContext(), "Cycle selected is" + AppVariables.selectedBillCycle,Toast.LENGTH_LONG).show();
             }
         });
+
+        save.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                saveBillData(getApplicationContext(),AppVariables.selectedDate,AppVariables.selectedBillCycle, amountTotal.getText().toString(), litresTotal.getText().toString());
+                Toast.makeText(getApplicationContext(),"Saved data : \n"+AppVariables.selectedDate+AppVariables.selectedBillCycle,Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+
+    public void saveBillData(Context context, String date,String billCycle, String T_amount, String T_litres) {
+        SharedPreferences sharedPreferences =  context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(date+billCycle,"Amount : "+T_amount + "Litres :"+T_litres);
+        editor.apply();
     }
 }

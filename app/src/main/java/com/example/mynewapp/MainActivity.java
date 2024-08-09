@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button buttonProceed = findViewById(R.id.proceed);
+        Button billHistory = findViewById(R.id.billHistory);
         datePicker = findViewById(R.id.datePicker);
         Spinner spinner = findViewById(R.id.selectBillCycle);
 
@@ -71,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        billHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ShowBillHistory.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void showMonthAndYearPicker() {

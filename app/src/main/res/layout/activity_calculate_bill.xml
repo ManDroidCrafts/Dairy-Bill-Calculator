@@ -88,6 +88,15 @@
 
     </LinearLayout>
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/save"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:text="Save"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"/>
+
 </LinearLayout>
 
 

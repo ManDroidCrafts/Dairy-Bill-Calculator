@@ -1,6 +1,8 @@
 package com.example.mynewapp;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -20,9 +22,9 @@ import java.util.logging.Logger;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-    private  List<BillData> items;
-    private TextView amountTotal;
-    private TextView litresTotal;
+    private final List<BillData> items;
+    private final TextView amountTotal;
+    private final TextView litresTotal;
 
     String[] months = new String[]{"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
     public MyAdapter(List<BillData> items, TextView amountTotal, TextView litresTotal) {
