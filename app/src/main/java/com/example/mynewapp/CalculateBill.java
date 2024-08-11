@@ -30,9 +30,9 @@ public class CalculateBill extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerview1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(),LinearLayoutManager.VERTICAL);
-        dividerItemDecoration.setDrawable(getDrawable(R.drawable.divider));
-        recyclerView.addItemDecoration(dividerItemDecoration);
+//        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(),LinearLayoutManager.VERTICAL);
+//        dividerItemDecoration.setDrawable(getDrawable(R.drawable.divider));
+//        recyclerView.addItemDecoration(dividerItemDecoration);
 
         TextView amountTotal = findViewById(R.id.amountTotal);
         TextView litresTotal = findViewById(R.id.litresTotal);
